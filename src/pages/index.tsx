@@ -60,13 +60,15 @@ export default function App() {
             mealName();
             setLoading(true)
             setHandleIngredient(false)
+            setNotFound(false);
+            setNotIngredient(false)
         }
     }, [search]);
 
     async function reloadTitle() {
 
         try {
-            await setSearch('')
+            await setSearch('')            
         } catch (error) {
             console.error('erro ao atualiza')
         }
